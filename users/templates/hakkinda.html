@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<div class="container mt-5">
+   
+    {% block title%} <h2 style="color:#17a2b8;"> ASTROLOJİ HAKKINDA</h2> {%endblock title%}
+
+{% if user.is_authenticated %}
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi itaque nemo dicta illo culpa dolores rerum voluptatem qui. Expedita sit itaque vitae veniam nam asperiores eos consequatur rerum repellendus doloribus et repellat quis quae voluptates a enim nisi libero officia, sint possimus soluta vel cum voluptatum. Ad laudantium deserunt ipsam.</p>
+</div>
+    {% else %}
+
+<p>Astroloji Hakkında devamı için..
+    <a href="{% url 'login'%}" class="btn btn-info ml-1">Giriş</a>
+    <a href="{% url 'signup'%}" class="btn btn-info ml-1">Kaydol</a>
+</p>
+
+  
+    
+    {% endif %}
+
+
+
+
+{% endblock content%}

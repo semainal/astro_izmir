@@ -1,0 +1,49 @@
+import requests
+from bs4 import BeautifulSoup
+
+
+{% extends 'base.html' %}
+
+
+{% block title%} HOME {% endblock title%}
+
+
+{% block content %}
+
+<div class="container mt-5"></div>
+<div class="jumbotron">
+    {% if user.is_authenticated %}
+    <h1 class="display-4">ASTROLOJİ ÖĞRENİYORUM...</h1>
+    <p class="lead">Astrolojinin derinliklerine inmek, sizi tanımlayan gezegenleri ve elementleri keşfetmek için doğru yerdesiniz.
+        Şimdi, arkanıza yaslanın, derin bir nefes alın ve gökyüzünün size sunduklarını keşfedin.. </p>
+    <p class="lead">
+        <a class="btn btn-info btn-lg" href="{% url 'article_list'%}" role="button">Aylık yazıların tamamı için...</a>
+    </p>
+
+
+
+    {% else %}
+
+    <div class="jumbotron">
+        <h1 class="display-4">ASTROLOJİ ÖĞRENİYORUM...</h1>
+        <p class="lead">Astrolojinin derinliklerine inmek, sizi tanımlayan gezegenleri ve elementleri keşfetmek için doğru yerdesiniz.
+            Şimdi, arkanıza yaslanın, derin bir nefes alın ve gökyüzünün size sunduklarını keşfedin.. </p>
+        <p class="lead">
+        </p>
+
+       
+        <p>Aylık yazıların devamı için..
+            <a href="{% url 'login'%}" class="btn btn-info ml-1">Giriş</a>
+            <a href="{% url 'signup'%}" class="btn btn-info ml-1">Kaydol</a>
+        </p>
+
+        
+    </div>
+</div>
+    {% endif %}
+</div>
+
+
+
+
+{% endblock content%}

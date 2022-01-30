@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static%}
+
+
+
+
+
+{% block content %}
+
+<div class="container mt-5">
+   
+    <div class="container mt-5">
+        {% block title%} <h2 style="color:#17a2b8; text-align:center" class="mb-5"> ELEMENTLER </h2>  {%endblock title%}
+        
+          {% if user.is_authenticated %}
+
+<div class="container">
+    <div class="row mt-5">
+      <div class="col">
+          <div class="card bg-danger" style="color:white; text-align:center" ><img src="{% static 'img/fire.png'%}" alt="" width="30px" height="30px"> ATEŞ GRUBU   </div>
+      </div>
+      <div class="col">
+        <div class="card bg-warning" style="color:white; text-align:center"  > <img src="{% static 'img/earth.png'%}" alt="" width="30px" height="30px">TOPRAK GRUBU</div>
+      </div>
+      <div class="col">
+        <div class="card bg-info" style="color:white; text-align:center"  > <img src="{% static 'img/air.png'%}" alt="" width="30px" height="30px">HAVA GRUBU</div>
+      </div>
+      <div class="col">
+        <div class="card bg-success" style="color:white; text-align:center"  > <img src="{% static 'img/water.png'%}" alt="" width="30px" height="30px">SU GRUBU</div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-3">
+        <div class="card border-danger" style="text-align:center" >
+            <p class="text-danger mt-3">KOÇ</p>
+            <p class="text-danger">ASLAN</p>
+            <p class="text-danger">YAY</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card border-warning" style="text-align:center" >
+            <p class="text-warning mt-3">BOĞA</p>
+            <p class="text-warning">BAŞAK</p>
+            <p class="text-warning">OĞLAK</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card border-info" style="text-align:center" >
+            <p class="text-info mt-3">İKİZLER</p>
+            <p class="text-info">TERAZİ</p>
+            <p class="text-info">KOVA</p>
+        </div>
+      </div>
+      <div class="col-3">
+          <div class="card border-success" style="text-align:center" >
+        <p class="text-success mt-3">YENGEÇ</p>
+        <p class="text-success">AKREP</p>
+        <p class="text-success">BALIK</p>
+    </div></div>
+    </div>
+  </div>
+    </div>
+</div>
+
+
+<div class="container mt-5" >
+    <h2 class="mb-5" style="color:#17a2b8; text-align:center">NİTELİKLER</h2>
+<div class="container mt-5">
+    <div class="row mt-5">
+      <div class="col-4">
+        <div class="card " style="background-color: lightcoral; text-align:center;color:white" >ÖNCÜ</div>
+      </div>
+      <div class="col-4">
+        <div class="card" style="background-color: mediumspringgreen; text-align:center;color:white">SABİT</div>
+      </div>
+      <div class="col-4">
+        <div class="card" style="background-color: mediumslateblue; text-align:center;color:white" >DEĞİŞKEN</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <div class="card" style="text-align:center; " >
+            <p class="text mt-3" style="color: lightcoral;">KOÇ</p>
+            <p class="text" style="color: lightcoral;">YENGEÇ</p>
+            <p class="text" style="color: lightcoral;">TERAZİ</p>
+            <p class="text" style="color: lightcoral;">OĞLAK</p>
+        </div></div>
+      <div class="col-4">
+        <div class="card" style="text-align:center; " >
+            <p class="text mt-3" style="font-size: large; color: mediumspringgreen; ">BOĞA</p>
+            <p class="text" style="color: mediumspringgreen;">ASLAN</p>
+            <p class="text" style="color: mediumspringgreen ;">AKREP</p>
+            <p class="text" style="color: mediumspringgreen;">KOVA</p>
+      </div></div>
+      <div class="col-4">
+        <div class="card" style="text-align:center; " >
+            <p class="text mt-3" style="color: mediumslateblue;">İKİZLER</p>
+            <p class="text" style="color: mediumslateblue;">BAŞAK</p>
+            <p class="text" style="color: mediumslateblue;">YAY</p>
+            <p class="text" style="color: mediumslateblue;">BALIK</p>
+    </div>
+  </div>
+</div>
+
+<h2 style="color:#17a2b8; text-align:center" class="mt-5">BURÇLAR</h2>
+<div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="card border-danger" style="text-align: center;">ATEŞ + ÖNCÜ = KOÇ</div>
+      </div>
+      <div class="col">
+        <div class="card border-warning" style="text-align: center;">TOPRAK + ÖNCÜ = OĞLAK</div>
+      </div>
+      <div class="col">
+        <div class="card border-info" style="text-align: center;">HAVA + ÖNCÜ = TERAZİ</div>
+      </div>
+      <div class="col">
+        <div class="card border-success" style="text-align: center;">SU + ÖNCÜ = YENGEÇ</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="card border-danger" style="text-align: center;">ATEŞ + SABİT = ASLAN</div>
+      </div>
+      <div class="col">
+        <div class="card border-warning" style="text-align: center;">TOPRAK + SABİT = BOĞA</div>
+      </div>
+      <div class="col">
+        <div class="card border-info" style="text-align: center;">HAVA + SABİT = KOVA</div>
+      </div>
+      <div class="col">
+        <div class="card border-success" style="text-align: center;">SU + SABİT = AKREP</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="card border-danger" style="text-align: center;">ATEŞ + DEĞİŞKEN = YAY</div>
+      </div>
+      <div class="col">
+        <div class="card border-warning" style="text-align: center;">TOPRAK + DEĞİŞKEN = BAŞAK</div>
+      </div>
+      <div class="col">
+        <div class="card border-info" style="text-align: center;">HAVA + DEĞİŞKEN = İKİZLER</div>
+      </div>
+      <div class="col">
+        <div class="card border-success" style="text-align: center;">SU + DEĞİŞKEN = BALIK</div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="container mb-5">
+    <br>
+    <br>
+    <br>
+</div>
+
+    {% else %}
+
+
+
+        <p>Elementler devamı için..
+            <a href="{% url 'login'%}" class="btn btn-info ml-1">Giriş</a>
+            <a href="{% url 'signup'%}" class="btn btn-info ml-1">Kaydol</a>
+        </p>
+
+        
+
+    
+    {% endif %}
+</div>
+
+
+
+{% endblock content%}
